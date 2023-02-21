@@ -8,9 +8,7 @@ import { useState } from "react";
 
 import { TextInput, Image, ScrollView } from "react-native";
 
-export default function TabOneScreen({
-  navigation,
-}: RootTabScreenProps<"TabOne">) {
+export default function HomeScreen({ navigation }) {
   const [post, SetPosts] = useState([]);
 
   return (

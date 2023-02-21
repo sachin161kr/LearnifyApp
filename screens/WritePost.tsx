@@ -7,7 +7,7 @@ import { Text, View } from "../components/Themed";
 import { TextInput, TouchableOpacity } from "react-native";
 import Colors from "../constants/Colors";
 
-export default function ModalScreen({ navigation }) {
+export default function WritePost({ navigation }) {
   return (
     <>
       <View

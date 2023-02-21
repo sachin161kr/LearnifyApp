@@ -22,10 +22,9 @@ import {
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import ModalScreen from "../screens/ModalScreen";
-import NotFoundScreen from "../screens/NotFoundScreen";
-import TabOneScreen from "../screens/TabOneScreen";
-import TabTwoScreen from "../screens/TabTwoScreen";
+import WritePost from "../screens/WritePost";
+import HomeScreen from "../screens/HomeScreen";
+import Profile from "../screens/Profile";
 import PublishScreen from "../screens/PublishScreen";
 import {
   RootStackParamList,
@@ -63,13 +62,8 @@ function RootNavigator() {
         component={BottomTabNavigator}
         options={{ headerShown: false }}
       />
-      <Stack.Screen
-        name="NotFound"
-        component={NotFoundScreen}
-        options={{ title: "Oops!" }}
-      />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
-        <Stack.Screen name="Post" component={ModalScreen} />
+        <Stack.Screen name="Post" component={WritePost} />
         <Stack.Screen
           name="Publish Settings"
           component={PublishScreen}
@@ -115,8 +109,8 @@ function BottomTabNavigator() {
       }}
     >
       <BottomTab.Screen
-        name="TabOne"
-        component={TabOneScreen}
+        name="HomeScreen"
+        component={HomeScreen}
         options={({ navigation }) => ({
           title: "My Feed",
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
@@ -155,8 +149,8 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
+        name="Profile"
+        component={Profile}
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
